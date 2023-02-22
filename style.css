@@ -1,0 +1,171 @@
+:root {
+  --clr-primary-cyan: hsl(179, 62%, 43%);
+  --clr-primary-yellow: hsl(71, 73%, 54%);
+  --clr-primary-lightcyan: #4abebd;
+
+  --clr-neutral-gray: hsl(204, 43%, 93%);
+  --clr-neutral-blue: hsl(218, 22%, 67%);
+
+  --ff-regular: "Karla", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-regular);
+  background-color: var(--clr-neutral-gray);
+  color: var(--clr-neutral-gray);
+  line-height: 1.7;
+  font-size: 0.8125rem;
+}
+
+h1 {
+  line-height: 1;
+}
+
+.card {
+  max-width: 19.375rem;
+  margin: 4.5rem 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 3px;
+}
+
+.card > div {
+  padding: 1.75rem 1.5rem;
+}
+
+.card__info {
+  background-color: #fff;
+  color: var(--clr-neutral-blue);
+}
+
+.card__heading {
+  color: var(--clr-primary-cyan);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+.card__info-subheading {
+  color: var(--clr-primary-yellow);
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.card__subheading {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.0625rem;
+  line-height: 1;
+}
+
+.card__pricing {
+  background-color: var(--clr-primary-cyan);
+}
+
+.card__pricing-price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: hsla(204, 43%, 93%, 0.7);
+  line-height: 1.2;
+}
+
+.card__pricing-price span {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card__pricing p:last-of-type {
+  font-size: 0.9375rem;
+}
+
+.btn {
+  display: block;
+  font-family: inherit;
+  font-size: 0.875rem;
+  width: 100%;
+  margin-top: 1.75rem;
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  background-color: var(--clr-primary-yellow);
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgb(168, 194, 51);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--clr-primary-cyan),
+    0 0 0 6px var(--clr-primary-yellow);
+}
+
+.card__advantages {
+  background-color: var(--clr-primary-lightcyan);
+}
+
+.card__advantages-list {
+  list-style: none;
+  line-height: 1.5;
+  /* color: hsla(204, 43%, 93%, 0.7); */
+}
+
+/* DESKTOP */
+
+@media (min-width: 43.75em) {
+  body {
+    font-size: 1rem;
+  }
+
+  .card {
+    margin: 6rem auto;
+    max-width: 39.6875rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .card > div {
+    padding: 2.5rem;
+  }
+
+  .card__info {
+    grid-column: 1 / 3;
+    /* padding-right: 4rem !important; */
+  }
+
+  .card__heading {
+    font-size: 1.5rem;
+  }
+
+  .card__info-subheading {
+    font-size: 1.125rem;
+  }
+
+  .card__subheading {
+    font-size: 1.125rem;
+  }
+
+  .card__advantages-list {
+    font-size: 0.8125rem;
+  }
+}
