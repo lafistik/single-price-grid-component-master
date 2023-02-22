@@ -23,6 +23,7 @@ body {
   color: var(--clr-neutral-gray);
   line-height: 1.7;
   font-size: 0.8125rem;
+  padding-inline: 2rem;
 }
 
 h1 {
@@ -31,7 +32,7 @@ h1 {
 
 .card {
   max-width: 19.375rem;
-  margin: 4.5rem 2rem;
+  margin: 4.5rem auto;
   border-radius: 0.5rem;
   overflow: hidden;
 
